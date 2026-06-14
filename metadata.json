@@ -1,0 +1,6 @@
+{
+  "name": "YatraSure",
+  "description": "India's predictive multi-modal mobility platform providing complete door-to-door journeys with zero uncertainty.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

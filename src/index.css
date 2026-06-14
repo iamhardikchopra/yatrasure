@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-navy-dark: #021B2E;
+  --color-teal-brand: #028090;
+  --color-mint-green: #02C39A;
+  --color-gold-amber: #F59E0B;
+  --color-light-bg: #F0F9FB;
+  --color-dark-gray-text: #334155;
+  --color-light-border: #E2E8F0;
+  --color-error-red: #DC2626;
+
+  --font-sans: "Poppins", sans-serif;
+}
+
+@layer utilities {
+  @keyframes pulse-gold {
+    0%, 100% {
+      box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.4);
+      border-color: #F59E0B;
+    }
+    50% {
+      box-shadow: 0 0 20px 6px rgba(245, 158, 11, 0.7);
+      border-color: #FFF;
+    }
+  }
+
+  @keyframes pulse-red {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.4);
+      opacity: 0.4;
+    }
+  }
+
+  @keyframes pulse-teal {
+    0%, 100% {
+      box-shadow: 0 0 0 0px rgba(2, 195, 154, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 15px 8px rgba(2, 195, 154, 0.1);
+    }
+  }
+
+  @keyframes map-pulse {
+    0% {
+      transform: scale(0.95);
+      opacity: 0.8;
+      box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
+    }
+    70% {
+      transform: scale(1);
+      opacity: 1;
+      box-shadow: 0 0 0 14px rgba(245, 158, 11, 0);
+    }
+    100% {
+      transform: scale(0.95);
+      opacity: 0.8;
+      box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+    }
+  }
+
+  @keyframes dot-pulse {
+    0% {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  }
+
+  .animate-pulse-gold {
+    animation: pulse-gold 2s infinite ease-in-out;
+  }
+
+  .animate-pulse-red {
+    animation: pulse-red 1.5s infinite ease-in-out;
+  }
+
+  .animate-pulse-teal {
+    animation: pulse-teal 2.5s infinite ease-in-out;
+  }
+
+  .animate-map-pulse {
+    animation: map-pulse 2s infinite;
+  }
+
+  .animate-dot-pulse {
+    animation: dot-pulse 1.5s infinite ease-in-out;
+  }
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #F0F9FB; /* Light Background */
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar for better sleek look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(2, 128, 144, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(2, 128, 144, 0.5);
+}
